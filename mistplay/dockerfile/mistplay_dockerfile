@@ -1,0 +1,5 @@
+FROM python:3.7
+ARG export_file=misplay-challenge.csv
+COPY $export_file predictions.csv
+COPY misplay_challenge_execute.py /
+CMD ["python", "./misplay_challenge_execute.py"]
